@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Deck
+comment0.text=\r\n\ Deck\ of\ cards\r\n\ \r\n\ @author\ (Anthony\ Zepperi)\ \r\n\ @version\ (1.4)\r\n
+comment1.params=
+comment1.target=Deck()
+comment2.params=
+comment2.target=Card\ deal()
+comment3.params=
+comment3.target=void\ act()
+numComments=4
