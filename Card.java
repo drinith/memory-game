@@ -8,9 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Card extends Actor
 {
-    private String cardImage;  // the filename of the card image
-    private String cardImageOver;  // the file name of the back of the card
-    private boolean faceUp; // keeps track of whether the card is face-up or not
+    private String cardImage;  // o nome do arquivo da imagem do cartão
+    private String cardImageOver;  // o nome do arquivo da parte de trás do cartão
+    private boolean faceUp; // controla se o cartão está virado para cima ou não
     
     
     
@@ -52,7 +52,7 @@ public class Card extends Actor
             {
                 showFace();
                 MemoryWorld w = (MemoryWorld) (getWorld());
-                w.recordCardShowing(this); //tells the world the card is face-up.
+                w.recordCardShowing(this); // diz ao mundo que a carta está virada para cima.
             }
         }
     }

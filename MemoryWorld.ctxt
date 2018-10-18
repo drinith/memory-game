@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MemoryWorld
-comment0.text=\r\n\ Area\ for\ the\ cards\ to\ be\r\n\ \r\n\ @author\ (Anthony\ Zepperi)\ \r\n\ @version\ (1.9)\r\n
+comment0.text=\r\n\ Mesa\ das\ cartas\r\n\ Projeto\ alterado\ para\ a\ disciplina\ de\ Game\ CEFET-RJ\r\n\ \r\n\ \ \ \r\n\ @author\ (Felipe\ Mello)\ \r\n\ @version\ (1.9)\r\n
 comment1.params=
 comment1.target=MemoryWorld()
 comment2.params=

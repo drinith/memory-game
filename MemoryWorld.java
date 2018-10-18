@@ -1,9 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Area for the cards to be
+ * Mesa das cartas
+ * Projeto alterado para a disciplina de Game CEFET-RJ
  * 
- * @author (Anthony Zepperi) 
+ *   
+ * @author (Felipe Mello) 
  * @version (1.9)
  */
 public class MemoryWorld extends World
@@ -19,22 +21,22 @@ public class MemoryWorld extends World
     private static final Color bgColor = Color.LIGHT_GRAY; //Board color 
     public MemoryWorld()
     {
-       // Create a new world with 400 x 500 cells with a cell size of 1x1 pixels.
+       // Crie um novo mundo com 400 x 500 células com um tamanho de célula de 1x1 pixels.
        super(400, 500, 1);
-       label1 =  new Label("Memory!");
+       label1 =  new Label("Jogo da Memória!");
        //fills background of board
        bg = getBackground();
        bg.setColor(bgColor);
        bg.fill();
        
-       //keeps track of cards on board
+       //mantém o controle de cartões na board
        board = new Card[BOARD_SIZE];
        
-       //keeps track of Cards for current play
+       // acompanha as Cartas para jogo atual
        cardsShowing = new Card[2];
        
-       numOver = 0; // total number of cards face-up.
-       numShowing = 0; // number of cards showing for the current play
+       numOver = 0; // número total de cartões virados para cima.
+       numShowing = 0; // número de cartas exibidas para o jogo atual
        deck = new Deck();
        
        fillArray();
@@ -62,7 +64,7 @@ public class MemoryWorld extends World
     
     public void setup()
     {
-        final int SQUARE_SIZE = 4;  //number of rows and columns
+        final int SQUARE_SIZE = 4;  // número de linhas e colunas
         int x = 80;
         int y = 80;
         int index = 0;
@@ -71,8 +73,8 @@ public class MemoryWorld extends World
             x = 80;
             for(int col = 0; col < SQUARE_SIZE; col++)
             {
-                board[index].turnOver();   //comment if you want cards to be face-up
-                //board[index].showFace(); //uncomment if you want cards to show
+                board[index].turnOver();   // comente se você quiser que os cards fiquem virados para cima
+                //board[index].showFace(); // descomente se você quiser cartões para mostrar
                 addObject(board[index], x, y);
                 index++;
                 x +=80;
@@ -80,13 +82,14 @@ public class MemoryWorld extends World
             y += 110;
         }
         
-        // a normal label = by default, the background is transparent
+        // um rótulo normal = por padrão, o plano de fundo é transparente
         
         label1.setFont(new Font("SansSerif",24));
         label1.setHeight(30);
-        label1.setWidth(200); //some random guess
+        label1.setWidth(400); // algum palpite aleatório
         label1.setAlignment(Label.CENTER);
         addObject(label1, 120, 470 );
+        
         
         
     }
@@ -118,7 +121,7 @@ public class MemoryWorld extends World
     
     
     
-    
+    //Função que encontra a combinação
     public boolean checkMatch()
     {
         return cardsShowing[0].getCardImage().equals(cardsShowing[1].getCardImage());
@@ -138,7 +141,7 @@ public class MemoryWorld extends World
             Greenfoot.delay(50);
             if (checkMatch())
             {
-                bg.setColor(Color.RED);
+                bg.setColor(Color.GREEN);
                 bg.fill();
                 Greenfoot.playSound("cowbell.wav");
                 Greenfoot.delay(10);
