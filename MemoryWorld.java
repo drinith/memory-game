@@ -10,6 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MemoryWorld extends World
 {
+    private Time time;
     private GreenfootImage bg; //background image
     private Card[] board;  // holds cards for the game
     private Deck deck; // the deck from which the cards are dealt.
@@ -18,16 +19,19 @@ public class MemoryWorld extends World
     private Card[] cardsShowing; // holds the cards showing for the current play
     private Label label1;
     private static final int BOARD_SIZE = 16; // Number of cards on the Memory Board
-    private static final Color bgColor = Color.LIGHT_GRAY; //Board color 
+    private static final Color bgColor = Color.DARK_GRAY; //Board color 
     public MemoryWorld()
     {
        // Crie um novo mundo com 400 x 500 células com um tamanho de célula de 1x1 pixels.
-       super(400, 500, 1);
+       super(640, 640, 1);
        label1 =  new Label("Jogo da Memória!");
-       //fills background of board
+       time = new Time();
+       // preenche o fundo do tabuleiro
        bg = getBackground();
        bg.setColor(bgColor);
        bg.fill();
+       
+                   
        
        //mantém o controle de cartões na board
        board = new Card[BOARD_SIZE];
@@ -77,18 +81,22 @@ public class MemoryWorld extends World
                 //board[index].showFace(); // descomente se você quiser cartões para mostrar
                 addObject(board[index], x, y);
                 index++;
-                x +=80;
+                x +=160;
             }
-            y += 110;
+            y += 140;
         }
         
         // um rótulo normal = por padrão, o plano de fundo é transparente
         
+        //Label texto do jogo
+        
         label1.setFont(new Font("SansSerif",24));
         label1.setHeight(30);
-        label1.setWidth(400); // algum palpite aleatório
+        label1.setWidth(300); // algum palpite aleatório
         label1.setAlignment(Label.CENTER);
-        addObject(label1, 120, 470 );
+        addObject(label1, 200, 600 );
+        addObject(time, 500, 15 );
+       
         
         
         
@@ -126,13 +134,7 @@ public class MemoryWorld extends World
     {
         return cardsShowing[0].getCardImage().equals(cardsShowing[1].getCardImage());
     }
-    
-    
-    
-    
-    
-    
-    
+        
     
     public void act()
     {
@@ -167,8 +169,9 @@ public class MemoryWorld extends World
             //System.out.printIn("WIN");
             Greenfoot.playSound("tada.wav");
             bg.setColor(Color.RED);
+            bg.setColor(Color.YELLOW);
             bg.fill();
-            label1.setText("You Win!");
+            label1.setText("Você ganhou!");
             Greenfoot.stop();
         }
         

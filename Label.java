@@ -6,8 +6,8 @@ import java.awt.*;
 /**
  * Write a description of class Label here.
  * 
- * @author (Anthony Zepperi) 
- * @version (1.7)
+ * @author (Felipe) 
+ * @version ()
  */
 public class Label extends Actor
 {
