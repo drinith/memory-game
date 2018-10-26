@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Card here.
+ * Escreva uma descrição da classe Card aqui.
  * 
- * @author (Anthony Zepperi) 
- * @version (1.5)
+ * @author (Felipe) 
+ * @version ()
  */
 public class Card extends Actor
 {

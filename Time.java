@@ -33,15 +33,13 @@ public class Time extends Actor
      
         image = new GreenfootImage("Tempo: "+durationSecs+" s",
                                                       30,
-                                                      new Color(0,0,0,200),
-                                                      new Color(255,255,255,0));
+                                                      new Color(255,255,255,200),
+                                                      new Color(0,0,0,0));
         setImage(image); // Atualiza o ator com a imagem
-            
-               
+                          
        
         // Add your action code here.
-         
-     
+           
        
            
                // Later (for example in an act() method), do:

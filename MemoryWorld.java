@@ -145,7 +145,7 @@ public class MemoryWorld extends World
             {
                 bg.setColor(Color.GREEN);
                 bg.fill();
-                Greenfoot.playSound("cowbell.wav");
+                Greenfoot.playSound("ponto.wav");
                 Greenfoot.delay(10);
                 bg.setColor(bgColor);
                 bg.fill();
@@ -154,7 +154,7 @@ public class MemoryWorld extends World
             }
             else
             {
-                Greenfoot.playSound("no.wav");
+                Greenfoot.playSound("erro.mp3");
                 cardsShowing[0].turnOver();
                 cardsShowing[1].turnOver();
             }
@@ -167,7 +167,7 @@ public class MemoryWorld extends World
         if(numOver == BOARD_SIZE)
         {
             //System.out.printIn("WIN");
-            Greenfoot.playSound("tada.wav");
+            Greenfoot.playSound("win.wav");
             bg.setColor(Color.RED);
             bg.setColor(Color.YELLOW);
             bg.fill();
