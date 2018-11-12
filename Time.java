@@ -45,7 +45,7 @@ public class Time extends Actor
                // Later (for example in an act() method), do:
         currentTime = System.currentTimeMillis();
         durationMillis = (int)(currentTime - startTime);
-        System.out.print(durationMillis);
+        //System.out.print(durationMillis);
         // durationMillis is in milliseconds, so you
         // can convert to seconds/minutes whatever:
         durationSecs = durationMillis / 1000;
