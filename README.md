@@ -1,4 +1,4 @@
 # Memory Game
 
 ## Título: Memory Game
-## Autor: Felipe
+## Autor: Felipe, Higor e Thiago
