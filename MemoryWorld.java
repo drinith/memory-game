@@ -25,6 +25,7 @@ public class MemoryWorld extends World
        // Crie um novo mundo com 400 x 500 células com um tamanho de célula de 1x1 pixels.
        super(640, 640, 1);
        label1 =  new Label("Jogo da Memória!");
+       label1.setWidth(500);
        time = new Time();
        // preenche o fundo do tabuleiro
        bg = getBackground();
@@ -92,13 +93,12 @@ public class MemoryWorld extends World
         
         label1.setFont(new Font("SansSerif",24));
         label1.setHeight(30);
-        label1.setWidth(300); // algum palpite aleatório
+        label1.setWidth(600); // lagura do texto
         label1.setAlignment(Label.CENTER);
-        addObject(label1, 200, 600 );
+        addObject(label1, 100, 600 ); //texto com seu posicionamento
         addObject(time, 500, 15 );
-       
-        
-        
+ 
+               
         
     }
     
@@ -154,7 +154,7 @@ public class MemoryWorld extends World
             }
             else
             {
-                Greenfoot.playSound("erro.mp3");
+                Greenfoot.playSound("erro.wav");
                 cardsShowing[0].turnOver();
                 cardsShowing[1].turnOver();
             }
@@ -171,7 +171,7 @@ public class MemoryWorld extends World
             bg.setColor(Color.RED);
             bg.setColor(Color.YELLOW);
             bg.fill();
-            label1.setText("Você ganhou!");
+            label1.setText("Você ganhou! Tempo "+time.valorTempo+ "s" );
             Greenfoot.stop();
         }
         

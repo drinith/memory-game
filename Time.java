@@ -18,6 +18,7 @@ public class Time extends Actor
     long currentTime;
     public int durationSecs =0;
     int durationMillis;
+    public static int valorTempo; 
    
     public Time (){
         
@@ -31,7 +32,7 @@ public class Time extends Actor
     public void act() 
     {
      
-        image = new GreenfootImage("Tempo: "+durationSecs+" s",
+        image = new GreenfootImage("Tempo: "+this.valorTempo +" s",
                                                       30,
                                                       new Color(255,255,255,200),
                                                       new Color(0,0,0,0));
@@ -48,7 +49,8 @@ public class Time extends Actor
         //System.out.print(durationMillis);
         // durationMillis is in milliseconds, so you
         // can convert to seconds/minutes whatever:
-        durationSecs = durationMillis / 1000;
+        this.valorTempo =  durationMillis / 1000;
+       
     
     }    
 }
